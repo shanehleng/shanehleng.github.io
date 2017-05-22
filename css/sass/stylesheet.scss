@@ -1,0 +1,284 @@
+/*******************************************************
+
+Site Name: The Web and Design Portfolio of Shaneh Leng 
+Site URI: https://shanehleng.github.io	               
+Author: Shaneh Leng
+Author URI: https://shanalouisa.tumblr.com
+Theme Name: 
+Description: The theme for my web and design portfolio
+Version: 1.0
+
+********************************************************/
+
+@import '_font-face';
+@import '_reset';
+@import '_variables';
+@import '_mixins';
+
+
+html { 
+	height: auto; 
+	background: $dirtywhite; 
+	text-align: justify;
+	@include gradient2;
+
+	&::-webkit-scrollbar { 
+		width: 6px;	
+		background-color: $dark; }
+
+	&::-webkit-scrollbar-thumb {
+		background-color: lighten($dark, 30%);
+		width: 3px;	
+	}
+ }
+
+
+img { @include imgResponsive; }
+
+body { background: $body; @include gradient2; color: #444; }
+
+.title { width: 70%; padding: 20px 20px;
+	
+	@include titleBackdropFilter;
+	@include titleTextStyles;
+
+	span {
+		font-weight: bold;
+		color: $gold;
+	}
+}
+
+.section_title { 
+	position: relative; 
+	width: 100%; 
+	text-align: left; 
+	margin-top: 30px; 
+	margin-bottom: 3em;
+	
+	h1 {
+		@include sectionTitleStyles;
+
+		span {
+			font-weight: normal;
+			font-size: 1.05em;
+			color: lighten($copper, 10%);
+			text-transform: none;
+		}
+	}
+
+	.sectionline { width: 100%; background: $sectionline; height: 2px;
+		span {
+			width: 4%;
+			height: 4px;
+			background: $copper;
+			display: block;
+			position: absolute;
+			margin-top: -1px;
+			border-radius: 2px;
+		}
+	}
+}
+
+.portfolio { margin: 20px auto;
+
+	&-sorting { font-size: 16px; margin: 10px 0 15px 0;
+
+		li { margin-bottom: 15px; 	
+
+			a { 
+				display: inline-block; 
+				@include portfolioButtonsStyles;
+				@include linkTransition(0.3s);
+
+				&:hover, &:active { 
+					background: darken(#fff, 1%); 
+					font-weight: bold; 
+					box-shadow: $buttonShadow;
+					@include linkTransition(0.3s);
+				}
+
+				&:after { @include boldFix; }
+
+				&:focus { cursor: default; 
+					@include portfolioButtonsOnFocus; 
+				}
+			}
+		}
+	}
+	
+	&-item { 
+		margin-bottom: 25px; 
+		position: relative; 
+		box-shadow: $itemShadow;
+	}
+
+	&-items {
+
+		li {
+
+			&:hover {
+
+				figcaption { opacity: 1;
+					h1 { @include figcaptionFade; }
+				}
+
+				img { @include imageZoom; filter: blur(0); -webkit-filter: blur(0);}
+			}
+		}
+	}
+}
+
+figure { position: relative; overflow: hidden;
+
+	img { transition: all 300ms; filter: grayscale(100%); -webkit-filter: grayscale(100%); }	
+}
+
+figcaption {
+	position: absolute;
+	height: 100%;
+	top: 0; bottom: 0; left: 0; right: 0;
+	z-index: 100;
+	opacity: 0;
+
+	@include figcaptionTransition;
+	@include figcaptionTransitionDelay;
+
+
+	h1 { text-align: center; vertical-align: middle; margin-top: 215px; 
+		@include figcaptionLabelStyle;
+		@include figcaptionTransition;
+	}
+
+}
+
+// Pages
+#info { margin: 20px auto; text-align: center;
+
+	p, h3 {
+		text-align: left;
+	}
+	
+	p {
+		font-family: 'Lato', sans-serif; 
+		font-size: 1.3em; 
+		color: #555; 
+
+		&:nth-child(2) {
+			margin-top: -20px;
+			font-size: 1.1em;
+			color: #777;
+			margin-bottom: 30px;
+		}
+	}
+
+	h3 { 
+		color: #555; 
+		font-family: 'Lato', sans-serif; 
+		font-size: 1.15em;
+		margin-bottom: 5px;
+		    font-weight: bold;
+
+
+		span {
+			color: $copper; 
+			font-family: 'Lora', serif; 
+			font-style: italic;
+			font-size: 1.1em;
+		}
+	}
+
+	div {
+
+		&.link { 
+			text-align: center; 
+			background: lighten($copper, 5%); 
+			color: #fff; 
+			box-shadow: $buttonShadow; 
+			@include linkTransition(0.4s);
+
+			&:hover { 
+				text-decoration: none; 
+				background: #444;
+				@include linkTransition(0.4s); }
+
+			&:active { box-shadow: none; }
+		}
+
+		&.nolink {
+			color: #ccc; 
+			font-weight: bold; 
+			font-family: 'Lora', serif; 
+			font-style: italic;
+			font-size: 1.5em;
+		}
+	}
+
+	a.link { 
+		display: block; 
+		padding: 10px 50px; 
+		@include linkStyles;
+		@include linkTransition(0.4s);
+
+		&:hover {
+			letter-spacing: 5px;
+			@include linkTransition(0.4s);
+		}
+	}
+
+	hr { 
+		max-width: 100%; 
+		border: 1px solid $sectionline; 
+		margin: 50px auto; }
+}
+
+// About Me 
+#about_section { margin-bottom: 10px; }
+	
+#image {  
+
+	.circle {
+		margin: 0 auto;
+		margin-bottom: 10px;
+		@include imageCircleStyles;
+	}
+}
+
+#desc {
+	text-align: left;
+	margin-top: 10px;
+	@include descStyles;
+
+	span { @include descNameStyles; }
+
+	.italic { @include descItalicStyles; }
+
+	ul { text-align: center; margin-top: 10px;
+
+		a[data-tooltip] {
+		  position: relative;
+		  z-index: 2;
+		  cursor: pointer;
+		} 
+	}
+
+	img.social {
+		width: 40px;
+		height: 40px;
+		margin-left: 10px;
+	}
+}
+
+// Footer
+#footer {
+	position: relative;
+	bottom: 0;
+	vertical-align: middle;
+	background: darken($copper, 15%);
+	color: #fff;
+
+	p {
+		margin-top: 12px;
+		padding-left: 10px;
+		@include footerStyles;
+	}
+}

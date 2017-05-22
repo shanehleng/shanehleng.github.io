@@ -1,0 +1,12 @@
+// Reset
+
+@import '_mixins';
+
+*,
+*:after,
+*:before {
+	padding: 0;
+	margin: 0;
+
+	@include box-sizing;
+}

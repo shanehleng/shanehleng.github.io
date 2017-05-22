@@ -1,0 +1,357 @@
+/*******************************************************
+
+Site Name: The Web and Design Portfolio of Shaneh Leng 
+Site URI: https://shanehleng.github.io	               
+Author: Shaneh Leng
+Author URI: https://shanalouisa.tumblr.com
+Theme Name: 
+Description: The theme for my web and design portfolio
+Version: 1.0
+
+********************************************************/
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.eot?-ee0u0f");
+  src: url("../fonts/icomoon/icomoon.eot?#iefix-ee0u0f") format("embedded-opentype"), url("../fonts/icomoon/icomoon.woff?-ee0u0f") format("woff"), url("../fonts/icomoon/icomoon.ttf?-ee0u0f") format("truetype"), url("../fonts/icomoon/icomoon.svg?-ee0u0f#icomoon") format("svg"); }
+@font-face {
+  font-family: 'Oswald Extra Light';
+  src: local("Oswald-ExtraLight"), url("../fonts/oswald/Oswald-ExtraLight.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Oswald Light';
+  src: local("Oswald-Light"), url("../fonts/oswald/Oswald-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: 'RomanD';
+  src: local("RomanD"), url("../fonts/RomanD.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Roboto Light';
+  src: local("Roboto-Light"), url("../fonts/Roboto-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  src: local("Lora-Italic"), url("../fonts/Lora-Italic.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Lato';
+  src: local("Lato-Regular"), url("../fonts/lato/Lato-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Lato';
+  font-weight: bold;
+  src: local("Lato-Bold"), url("../fonts/lato/Lato-Bold.ttf") format("truetype"); }
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  height: auto;
+  background: #eaeaea;
+  text-align: justify;
+  background: #ece9e6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ece9e6, #ffffff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  html::-webkit-scrollbar {
+    width: 6px;
+    background-color: #2a201e; }
+  html::-webkit-scrollbar-thumb {
+    background-color: #83645e;
+    width: 3px; }
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto !important; }
+
+body {
+  background: #fafafa;
+  background: #ece9e6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ece9e6, #ffffff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #444; }
+
+.title {
+  width: 70%;
+  padding: 20px 20px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-family: "Oswald Extra Light", sans-serif;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff; }
+  .title span {
+    font-weight: bold;
+    color: gold; }
+
+.section_title {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 3em; }
+  .section_title h1 {
+    color: #b87351;
+    font-family: "Oswald Extra Light", sans-serif;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase; }
+    .section_title h1 span {
+      font-weight: normal;
+      font-size: 1.05em;
+      color: #c79075;
+      text-transform: none; }
+  .section_title .sectionline {
+    width: 100%;
+    background: #d9d9d9;
+    height: 2px; }
+    .section_title .sectionline span {
+      width: 4%;
+      height: 4px;
+      background: #b87351;
+      display: block;
+      position: absolute;
+      margin-top: -1px;
+      border-radius: 2px; }
+
+.portfolio {
+  margin: 20px auto; }
+  .portfolio-sorting {
+    font-size: 16px;
+    margin: 10px 0 15px 0; }
+    .portfolio-sorting li {
+      margin-bottom: 15px; }
+      .portfolio-sorting li a {
+        display: inline-block;
+        text-decoration: none;
+        font-family: "RomanD", sans-serif;
+        background: #eee;
+        padding: 5px 20px;
+        color: #222;
+        font-weight: bold;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        -webkit-transition: all 0.3s ease-in;
+        -moz-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
+        .portfolio-sorting li a:hover, .portfolio-sorting li a:active {
+          background: #fcfcfc;
+          font-weight: bold;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          -webkit-transition: all 0.3s ease-in;
+          -moz-transition: all 0.3s ease-in;
+          -o-transition: all 0.3s ease-in;
+          transition: all 0.3s ease-in; }
+        .portfolio-sorting li a:after {
+          display: block;
+          content: attr(title);
+          font-weight: bold;
+          height: 1px;
+          overflow: hidden;
+          visibility: hidden;
+          margin-bottom: -1px; }
+        .portfolio-sorting li a:focus {
+          cursor: default;
+          background-color: #b87351;
+          color: #fff;
+          border-radius: 3px;
+          font-weight: bold; }
+  .portfolio-item {
+    margin-bottom: 25px;
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  .portfolio-items li:hover figcaption {
+    opacity: 1; }
+    .portfolio-items li:hover figcaption h1 {
+      moz-transform: translateY(-20px);
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+      -moz-transition: all 300ms; }
+  .portfolio-items li:hover img {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    filter: blur(0);
+    -webkit-filter: blur(0); }
+
+figure {
+  position: relative;
+  overflow: hidden; }
+  figure img {
+    transition: all 300ms;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); }
+
+figcaption {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  opacity: 0;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-transition-delay: 100ms;
+  -moz-transition-delay: 100ms;
+  transition-delay: 100ms; }
+  figcaption h1 {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 215px;
+    font-family: "Oswald Extra Light", sans-serif;
+    font-size: 1.6em;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    padding: 5px 0;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    transition: all 300ms; }
+
+#info {
+  margin: 20px auto;
+  text-align: center; }
+  #info p, #info h3 {
+    text-align: left; }
+  #info p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    color: #555; }
+    #info p:nth-child(2) {
+      margin-top: -20px;
+      font-size: 1.1em;
+      color: #777;
+      margin-bottom: 30px; }
+  #info h3 {
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.15em;
+    margin-bottom: 5px;
+    font-weight: bold; }
+    #info h3 span {
+      color: #b87351;
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.1em; }
+  #info div.link {
+    text-align: center;
+    background: #bf8263;
+    color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in; }
+    #info div.link:hover {
+      text-decoration: none;
+      background: #444;
+      -webkit-transition: all 0.4s ease-in;
+      -moz-transition: all 0.4s ease-in;
+      -o-transition: all 0.4s ease-in;
+      transition: all 0.4s ease-in; }
+    #info div.link:active {
+      box-shadow: none; }
+  #info div.nolink {
+    color: #ccc;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.5em; }
+  #info a.link {
+    display: block;
+    padding: 10px 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 3px;
+    font-family: "Oswald Regular";
+    font-size: 1.2em;
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in; }
+    #info a.link:hover {
+      letter-spacing: 5px;
+      -webkit-transition: all 0.4s ease-in;
+      -moz-transition: all 0.4s ease-in;
+      -o-transition: all 0.4s ease-in;
+      transition: all 0.4s ease-in; }
+  #info hr {
+    max-width: 100%;
+    border: 1px solid #d9d9d9;
+    margin: 50px auto; }
+
+#about_section {
+  margin-bottom: 10px; }
+
+#image .circle {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: url("../img/me4.jpg");
+  background-size: cover;
+  border: 5px solid #c79075; }
+
+#desc {
+  text-align: left;
+  margin-top: 10px;
+  font-family: "Oswald Light";
+  font-size: 1.7em;
+  color: #333734;
+  letter-spacing: 1px; }
+  #desc span {
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c79075; }
+  #desc .italic {
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: none;
+    color: #333734; }
+  #desc ul {
+    text-align: center;
+    margin-top: 10px; }
+    #desc ul a[data-tooltip] {
+      position: relative;
+      z-index: 2;
+      cursor: pointer; }
+  #desc img.social {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px; }
+
+#footer {
+  position: relative;
+  bottom: 0;
+  vertical-align: middle;
+  background: #865137;
+  color: #fff; }
+  #footer p {
+    margin-top: 12px;
+    padding-left: 10px;
+    font-family: "Roboto Light";
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+
+/*# sourceMappingURL=stylesheet.css.map */

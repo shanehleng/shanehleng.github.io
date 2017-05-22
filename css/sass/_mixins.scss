@@ -1,0 +1,178 @@
+// Mixins
+ 
+@mixin gradient {
+  background: #fceabb; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fceabb, #f8b500); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fceabb, #f8b500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@mixin gradient2 {
+
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ece9e6, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ece9e6, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+// Box-sizing
+@mixin box-sizing {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin imgResponsive {
+	width: auto;
+	max-width: 100%;
+	height: auto !important;
+}
+
+@mixin frostedGlass {
+	background: $title-bg;
+}
+
+@mixin titleTextStyles {
+	font-family: $figcaptionFont, sans-serif;
+	font-size: 2.5em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+@mixin titleBackdropFilter {
+	backdrop-filter: blur($titleBlur);
+	-webkit-backdrop-filter: blur($titleBlur);
+}
+
+@mixin sectionTitleStyles {
+	color: $copper;
+	font-family: $figcaptionFont, sans-serif;
+	font-weight: bold;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+}
+
+@mixin tint_transition {
+	-webkit-transition: background 0.4s ease-in;
+	-moz-transition: background 0.4s ease-in;
+	-o-transition: background 0.4s ease-in;
+	transition: background 0.4s ease-in;
+}
+
+@mixin portfolioButtonsStyles {
+	text-decoration: none;
+	font-family: $portfolioButtonsFont, sans-serif;
+	background: #eee;
+	padding: 5px 20px;
+	color: #222;
+	font-weight: bold;
+	box-shadow: $buttonShadow;
+}
+
+@mixin portfolioButtonsOnFocus {
+	background-color: $copper;
+	color: #fff;
+    border-radius: 3px;
+	font-weight: bold;
+}
+
+@mixin boldFix {
+	display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+    margin-bottom:-1px;
+}
+
+@mixin figcaptionLabelStyle {
+	font-family: $figcaptionFont, sans-serif;
+	font-size: 1.6em;
+	letter-spacing: 3px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000;
+	padding: 5px 0;
+	backdrop-filter: blur(15px);
+	background: hsla(0,0%,100%,0.3);
+}
+
+@mixin figcaptionFade {
+	moz-transform: translateY(-20px);
+	-webkit-transform: translateY(-20px);
+	transform: translateY(-20px);
+	-moz-transition: all 300ms;
+}
+
+@mixin figcaptionTransition {
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	transition: all 300ms;
+}
+
+@mixin figcaptionTransitionDelay {
+	-webkit-transition-delay: 100ms;
+	-moz-transition-delay: 100ms;
+	transition-delay: 100ms;
+}
+
+@mixin imageZoom {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+@mixin linkStyles {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 3px;
+	font-family: $linkButtonFont;
+	font-size: 1.2em;
+}
+
+@mixin linkTransition($duration) {
+	-webkit-transition: all ($duration) ease-in;
+	-moz-transition: all ($duration) ease-in;
+	-o-transition: all ($duration) ease-in;
+	transition: all ($duration) ease-in;
+}
+@mixin descStyles {
+	font-family: $descFont;
+	font-size: 1.7em;
+	color: $gray;
+	letter-spacing: 1px;
+}
+
+@mixin descNameStyles {
+	font-weight: bold;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: lighten($copper, 10%);
+}
+
+@mixin descItalicStyles {
+	font-style: italic;
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-transform: none;
+	color: $gray;
+}
+
+@mixin imageCircleStyles {
+	width: $circleDimension;
+	height: $circleDimension;
+	border-radius: 50%;
+	background: url('../img/me4.jpg');
+	background-size: cover;
+	border: $imageBorderStyle;
+}
+
+@mixin footerStyles {
+	font-family: $footerFont;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}

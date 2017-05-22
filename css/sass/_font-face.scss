@@ -1,0 +1,57 @@
+// Font-face Declarations
+
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot?-ee0u0f');
+	src:url('../fonts/icomoon/icomoon.eot?#iefix-ee0u0f') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.woff?-ee0u0f') format('woff'),
+		url('../fonts/icomoon/icomoon.ttf?-ee0u0f') format('truetype'),
+		url('../fonts/icomoon/icomoon.svg?-ee0u0f#icomoon') format('svg');
+}
+
+@font-face {
+	font-family: 'Oswald Extra Light';
+	src: local('Oswald-ExtraLight'),
+	     url('../fonts/oswald/Oswald-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Oswald Light';
+	src: local('Oswald-Light'),
+	     url('../fonts/oswald/Oswald-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'RomanD';
+	src: local('RomanD'),
+	     url('../fonts/RomanD.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Roboto Light';
+	src: local('Roboto-Light'),
+	     url('../fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Lora';
+	font-style: italic;
+	src: local('Lora-Italic'),
+	     url('../fonts/Lora-Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: local('Lato-Regular'),
+	     url('../fonts/lato/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-weight: bold;
+	src: local('Lato-Bold'),
+	     url('../fonts/lato/Lato-Bold.ttf') format('truetype');
+}
+

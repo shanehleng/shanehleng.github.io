@@ -1,0 +1,36 @@
+// Variables
+
+// Colors
+$bg-color: rgb(255,255,255);
+$main-fontcolor: rgb(78,78,78);
+$sectionline: darken($bg-color, 15%);
+$gold: rgb(255,215,0);
+$copper: rgb(184,115,81);
+$brown1: rgb(217,152,93);
+$choco: rgb(89,45,13);
+$gray: rgb(51,55,52);
+$dirtywhite: rgb(234,234,234);
+$yellow: rgb(253,220,47);
+$dark: rgb(42,32,30);
+$body: darken(#fff, 2%);
+// $title-bg: hsla(0,0%,100%,0.3);
+
+// BoxShadows
+$buttonShadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$itemShadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+// Fonts
+$figcaptionFont: 'Oswald Extra Light';
+$linkButtonFont: 'Oswald Regular';
+$descFont: 'Oswald Light';
+$portfolioButtonsFont: 'RomanD';
+$footerFont: 'Roboto Light';
+
+// Backdrop Filter
+$titleBlur: 6px;
+
+// Borders
+$imageBorderStyle: 5px solid lighten($copper, 10%);
+
+// Dimensions
+$circleDimension: 230px;
